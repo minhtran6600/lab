@@ -1,75 +1,15 @@
 # Git Lab
 ---
 
-This is a basic website that shows some simple git commands and examples.
+This is a single page website that explains git and some basic examples.
 
-Once you've copied the contents of this folder into your repository, open your command line and navigate to this folder. Run `git status` to see the currently modified files: 
+When you updated the files from the last lab, you introduced `changes` to the repository. Changes are 
+tracked in git with commits. You've already made one commit. When you made that commit, you did three things:
 
-```
-➜ lab git:(master) git status
-On branch master
+1. You `added` the files with `git add <filename>` (You can also use `git add .` to add everything in your directory and below)
+2. You `committed` the changes you added with `git commit -m "initial commit"`. The `-m` flag is shorthand for `--message`. Every git commit must have a message associated with it that should explain what the changes do. For examples of incresingly worse messages, see [XKCD #1296](https://xkcd.com/1296/)
+3. Finally, you pushed those changes to another system with `git push origin master`. This is not technically required, but doing so pushed your code to a server where other people can also pull and push code, allowing you to work collaboratively. The push command was in the form `git push <remote name> <branch name>`. The default git server for your repository is, by convention, called `origin` (you may have multiple servers you push to), and the default branch is, also by convention, called `master`.
 
-No commits yet
+Your git workflow should follow this cycle. Do a little work, add your changes, commit your changes, push your changes, repeat. Git commits shouldn't do a bunch of things, they should only do one. Your new development mindset should be *"Commit plenty, Commit often"*. We'll talk about the reason why later. For now, lets get back to code.
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	README.md
-	index.html
-
-nothing added to commit but untracked files present (use "git add" to track)
-➜ lab git:(master)
-```
-
-You can then add the changes to the list of changes to be committed with `git add <filename>`:
-
-```
-➜  lab git:(master) git add README.md
-➜  lab git:(master) git add index.html
-➜  lab git:(master) git status
-On branch master
-
-No commits yet
-
-Changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-
-	new file:   README.md
-	new file:   index.html
-
-➜  lab git:(master)
-```
-
-Finally, you can commit the changes with `git commit -m "initial commit"`:
-
-```
-➜  lab git:(master) git commit -m "initial commit"
-[master (root-commit) 55897b9] initial commit
- 2 files changed, 34 insertions(+)
- create mode 100644 README.md
- create mode 100644 index.html
-➜  lab git:(master) git status
-On branch master
-nothing to commit, working tree clean
-➜  lab git:(master)
-```
-
-If your repository is also remote, you can push the changes with `git push origin master`:
-
-```
-➜  lab git:(master) git push origin master
-Warning: Permanently added the RSA host key for IP address '140.82.113.3' to the list of known hosts.
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 1.15 KiB | 1.15 MiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0)
-To github.com:username/git_lab_test.git
- * [new branch]      master -> master
-➜  lab git:(master)
-```
-
-That concludes the first lab! Feel free to open the repository in a web browser and view it if you're using GitHub or another web service.
-
-When you're ready to continue, copy the contents of the `2_update_website_content/` folder (so that `README.md` is in the root of the repo directory). This will overwrite work in this directory, but that's ok! We've got it all versioned, after all...
+This step in the lab added changes to your `index.html` and `README.md`. Add, commit and push the chenges, then copy the folder `3_revert_me` into the repository so that the `README.md` is in the root of the repository, and continue from there.

@@ -11,12 +11,16 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-12">
-					<h1 class="text-center">
-						Hello World!
-					</h3>
-					<p>
-						This is a webpage that shows off some basic <code>git</code> examples.
-					</p>
+					<h1 id="git-lab">Git Lab and Cheat Sheet</h1>
+					<p><em>Not to be confused with <a href="https://gitlab.uah.edu/">GitLab</a></em></p>
+					<hr />
+					<h2 id="what-is-git">What is Git?</h2>
+					<p><a href="https://git-scm.com/">Git</a> is a <a href="https://en.wikipedia.org/wiki/Distributed_version_control">Distributed Version Control System</a> (DVCS) created by Linus Torvalds during his work on the <code>linux</code> kernel. It allows developers to track their changes, work collaboratively, and even tag special versions of the codebase for release. Git is by and far the most widely used version control system in the software development world (though in companies spanning multiple decades, you may still encounter <a href="https://en.wikipedia.org/wiki/Apache_Subversion">Subversion</a>, a <a href="https://en.wikipedia.org/wiki/Concurrent_Versions_System">Concurrent Versions System</a>).</p>
+					<p>Git’s central unit is a <code>repository</code>, or collection of similar files in a folder structure. A repository is updated via <code>commits</code>, which are simply lists of additions, subtractions, and changes to files in the repository’s last commit. Git repositories can have <code>branches</code>, which allow multiple versions of the code to exist at one time. Branches can also be merged into other branches, or deleted. A request to merge one branch onto another is called a <code>Pull Request</code>. Sometimes, PRs have conflicts, and conflicts can be resolved by manually editing the files, using an IDE, or a web client like <code>GitHub</code>, <code>GitLab</code>, <code>Gitea</code>, or <code>BitBucket</code>, all of which are git servers used in the industry.</p>
+					<p>Git can be installed from the <a href="https://git-scm.com/downloads">official website</a>. It can also be installed through a package manager like <code>apt</code> (debian), <code>brew</code> (MacOS), or <code>chocolatey</code> (Windows). There are also GUI Clients like <a href="https://desktop.github.com/"><code>GitHub Desktop</code></a> and <a href="https://www.gitkraken.com/"><code>GitKraken</code></a>. Many editors, like <code>PyCharm</code>, <code>Visual Studio Code</code>, <code>vim</code>, <code>XCode</code>, and <code>Visual Studio</code> also have git functionality built in or installable via well-maintained community plugins.</p>
+					<h2 id="performing-this-lab">Performing this lab</h2>
+					<p>To do this lab, install git on your system and clone this repository. Next, create a repository locally or in a hosted service. Finally, copy the contents of the first folder into your repository (so that <code>README.md</code> is in the root of the directory) and follow the instructions in the <code>README.md</code> file.</p>
+
 				</div>
 			</div>
 		</div>
